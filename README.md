@@ -1,2 +1,1 @@
-# roc
-Rate of change
+# Bitcoin
