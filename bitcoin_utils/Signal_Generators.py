@@ -28,7 +28,7 @@ def RSI(df,overbought=70,oversold=30):
     df['buy_sell_signal'] = df["sell_signal"] + df["buy_signal"]
     return df
 
-def ROC(df,buythreshold = 0,sellthreshold = 0): 
+def ROC(df,buythreshold = -0.1,sellthreshold = 0.1): 
     df["sell_signal"] = np.where(df["ROC"] < -(sellthreshold) , -1.0 , 0.0)
     df["sell_signal"] = df["sell_signal"].diff()
     df.loc[df["sell_signal"] == 1,"sell_signal"] = 0.0
